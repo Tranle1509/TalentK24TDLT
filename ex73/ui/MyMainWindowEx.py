@@ -16,15 +16,12 @@ class MyMainWindowEx(Ui_MainWindow):
 
     def solve(self):
         try:
-            # 1. Đọc dữ liệu hệ số a, b, c từ giao diện
             a = float(self.enterALineEdit.text())
             b = float(self.enterBLineEdit.text())
             c = float(self.enterCLineEdit.text())
 
-            # 2. Gọi hàm giải phương trình từ module trong libs
             result = solve_quadratic(a, b, c)
 
-            # 3. Hiển thị kết quả ra ô kết quả trên UI
             self.resultLineEdit.setText(str(result))
 
         except ValueError:
